@@ -10,3 +10,8 @@
 .selected {
     background-color: #f00;
 }
+
+.container {
+    margin-top: 50px;
+    text-align: center;
+}

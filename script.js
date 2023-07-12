@@ -7,6 +7,7 @@ document.getElementById("question-form").addEventListener("submit", function (ev
     generateMap(questionCount, answerCount);
 
     document.getElementById("print-button").disabled = false;
+    document.getElementById("download-button").disabled = false;
 });
 
 document.getElementById("print-button").addEventListener("click", function () {
@@ -54,3 +55,14 @@ function generateMap(questionCount, answerCount) {
         columns[currentColumn].appendChild(questionDiv);
     }
 }
+
+document.getElementById("download-button").addEventListener("click", function () {
+    var questionForm = document.getElementById("map-container");
+
+    html2canvas(questionForm).then(function (canvas) {
+        var link = document.createElement("a");
+        link.href = canvas.toDataURL("image/png");
+        link.download = "question_form.png";
+        link.click();
+    });
+});
