@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gerador de Mapa de Perguntas</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Gerador de Mapa de Perguntas</h1>
+
+        <form id="question-form">
+            <div class="form-group">
+                <label for="question-count">Número de Perguntas:</label>
+                <input type="number" class="form-control" id="question-count" required>
+            </div>
+
+            <div class="form-group">
+                <label for="answer-count">Número de Respostas:</label>
+                <input type="number" class="form-control" id="answer-count" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Gerar Mapa</button>
+        </form>
+
+        <div id="map-container" class="row"></div>
+
+        <button id="print-button" class="btn btn-primary" disabled>Imprimir Mapa</button>
+    </div>
+
+    <script src="html2pdf.bundle.min.js"></script>
+    <script src="html2canvas.bmin.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
