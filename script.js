@@ -37,10 +37,6 @@ function generateMap(questionCount, answerCount) {
             radioInput.name = "question-" + i;
             radioInput.value = "answer-" + j;
             radioInput.addEventListener("click", function () {
-                var selectedRadios = document.querySelectorAll('input[name="' + this.name + '"]:checked');
-                for (var k = 0; k < selectedRadios.length; k++) {
-                    selectedRadios[k].parentElement.classList.add("selected");
-                }
             });
 
             var circleLabel = document.createElement("label");
